@@ -1,3 +1,5 @@
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
+
 export default function Projects() {
   const projectList = [
     {
@@ -37,29 +39,31 @@ export default function Projects() {
       </h2>
       <div className="grid gap-6">
         {projectList.map((project, index) => (
-          <article key={index} className="island-shell rounded-2xl p-6 relative overflow-hidden">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-1">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-[var(--sea-ink)]">{project.title}</h3>
-                  <span className="text-sm font-medium text-[var(--lagoon-deep)] bg-[rgba(79,184,178,0.1)] px-3 py-1 rounded-full">{project.role}</span>
-                </div>
-                <p className="text-sm text-[var(--sea-ink-soft)] mb-4 italic">{project.description}</p>
-                <ul className="list-disc pl-5 text-sm text-[var(--sea-ink-soft)] space-y-1 mb-6">
-                  {project.points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-                <div className="flex gap-4">
-                  {project.links.map((link, i) => (
-                    <a key={i} href={link.url} target="_blank" rel="noreferrer" className="text-sm font-semibold text-[var(--lagoon-deep)] underline hover:text-[var(--sea-ink)]">
-                      {link.label}
-                    </a>
-                  ))}
+          <Card key={index} className="island-shell rounded-2xl border-none shadow-none bg-transparent">
+            <CardContent className="p-6">
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <CardTitle className="text-xl font-bold text-[var(--sea-ink)]">{project.title}</CardTitle>
+                    <span className="text-sm font-medium text-[var(--lagoon-deep)] bg-[rgba(79,184,178,0.1)] px-3 py-1 rounded-full">{project.role}</span>
+                  </div>
+                  <p className="text-sm text-[var(--sea-ink-soft)] mb-4 italic">{project.description}</p>
+                  <ul className="list-disc pl-5 text-sm text-[var(--sea-ink-soft)] space-y-1 mb-6">
+                    {project.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                  <div className="flex gap-4">
+                    {project.links.map((link, i) => (
+                      <a key={i} href={link.url} target="_blank" rel="noreferrer" className="text-sm font-semibold text-[var(--lagoon-deep)] underline hover:text-[var(--sea-ink)]">
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </section>

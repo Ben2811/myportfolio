@@ -383,3 +383,36 @@ a {
     @apply font-sans;
   }
 }
+@layer components {
+  .nav-link-modern {
+    @apply flex items-center justify-center px-4 py-2 text-sm font-semibold text-[var(--sea-ink-soft)] transition-all rounded-full hover:text-[var(--sea-ink)] hover:bg-gray-100/80 dark:hover:bg-white/10;
+  }
+  
+  .nav-link-modern.is-active {
+    @apply text-[var(--sea-ink)] bg-white shadow-sm dark:bg-white/10;
+  }
+
+  .nav-link-mobile {
+    @apply whitespace-nowrap px-3 py-1.5 text-[var(--sea-ink-soft)] transition-colors;
+  }
+
+  .nav-link-mobile.is-active {
+    @apply text-[var(--sea-ink)] font-bold border-b-2 border-[var(--lagoon-deep)];
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+  .nav-link-mobile-full {
+    @apply flex items-center px-4 py-3 text-base font-semibold text-[var(--sea-ink-soft)] transition-all rounded-xl hover:text-[var(--sea-ink)] hover:bg-gray-100/80 dark:hover:bg-white/10;
+  }
+  
+  .nav-link-mobile-full.is-active {
+    @apply text-[var(--sea-ink)] bg-white shadow-sm dark:bg-white/10 border-l-4 border-[var(--lagoon-deep)] rounded-l-none;
+  }

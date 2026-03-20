@@ -1,41 +1,87 @@
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react"
+
 export default function Contact() {
   return (
-    <section id="contact" className="scroll-mt-20 island-shell rounded-2xl p-6 bg-[rgba(79,184,178,0.05)] border border-[rgba(79,184,178,0.1)]">
-      <h2 className="text-2xl font-bold mb-6 text-[var(--sea-ink)] flex items-center gap-2">
-        <span className="h-6 w-1 bg-[var(--lagoon-deep)] rounded-full" />
-        Get In Touch
-      </h2>
-      <div className="flex flex-wrap gap-8 justify-center sm:justify-start">
-        <div className="flex items-center gap-3">
-          <div className="p-3 bg-white/50 rounded-xl border border-[var(--line)] text-[var(--lagoon-deep)]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          </div>
-          <div>
-            <p className="text-xs font-semibold text-[var(--sea-ink-soft)] uppercase tracking-wider">Email</p>
-            <a href="mailto:luanchuong51@gmail.com" className="text-sm font-medium text-[var(--sea-ink)] hover:text-[var(--lagoon-deep)]">luanchuong51@gmail.com</a>
-          </div>
-        </div>
+    <section id="contact" className="scroll-mt-20">
+      <Card className="island-shell rounded-3xl border border-[var(--line)] shadow-sm bg-white/50 dark:bg-white/5 backdrop-blur-sm overflow-hidden">
+        <div className="grid md:grid-cols-2">
+          {/* Left Side: Info */}
+          <div className="p-8 md:p-12 border-b md:border-b-0 md:border-r border-[var(--line)]">
+            <CardHeader className="p-0 mb-8">
+              <CardTitle className="text-3xl font-bold text-[var(--sea-ink)] flex items-center gap-3">
+                <span className="h-8 w-1.5 bg-[var(--lagoon-deep)] rounded-full" />
+                Get In Touch
+              </CardTitle>
+              <p className="text-[var(--sea-ink-soft)] mt-4 max-w-sm">
+                I'm always open to new opportunities, collaborations, or just a friendly chat. Feel free to reach out!
+              </p>
+            </CardHeader>
 
-        <div className="flex items-center gap-3">
-          <div className="p-3 bg-white/50 rounded-xl border border-[var(--line)] text-[var(--lagoon-deep)]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div>
-            <p className="text-xs font-semibold text-[var(--sea-ink-soft)] uppercase tracking-wider">Phone</p>
-            <a href="tel:0938533520" className="text-sm font-medium text-[var(--sea-ink)] hover:text-[var(--lagoon-deep)]">0938533520</a>
-          </div>
-        </div>
+            <div className="space-y-6">
+              <a 
+                href="mailto:luanchuong51@gmail.com" 
+                className="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 hover:border-[var(--lagoon-deep)] hover:shadow-md transition-all duration-300"
+              >
+                <div className="p-3 bg-[rgba(79,184,178,0.1)] rounded-xl text-[var(--lagoon-deep)] group-hover:scale-110 transition-transform">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-[var(--sea-ink-soft)] uppercase tracking-widest mb-1">Email Me</p>
+                  <p className="text-sm font-semibold text-[var(--sea-ink)]">luanchuong51@gmail.com</p>
+                </div>
+                <ExternalLink size={16} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity text-[var(--sea-ink-soft)]" />
+              </a>
 
-        <div className="flex items-center gap-3">
-          <div className="p-3 bg-white/50 rounded-xl border border-[var(--line)] text-[var(--lagoon-deep)]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <a 
+                href="tel:0938533520" 
+                className="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 hover:border-[var(--lagoon-deep)] hover:shadow-md transition-all duration-300"
+              >
+                <div className="p-3 bg-[rgba(79,184,178,0.1)] rounded-xl text-[var(--lagoon-deep)] group-hover:scale-110 transition-transform">
+                  <Phone size={24} />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-[var(--sea-ink-soft)] uppercase tracking-widest mb-1">Call Me</p>
+                  <p className="text-sm font-semibold text-[var(--sea-ink)]">0938533520</p>
+                </div>
+                <ExternalLink size={16} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity text-[var(--sea-ink-soft)]" />
+              </a>
+
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10">
+                <div className="p-3 bg-[rgba(79,184,178,0.1)] rounded-xl text-[var(--lagoon-deep)]">
+                  <MapPin size={24} />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-[var(--sea-ink-soft)] uppercase tracking-widest mb-1">Location</p>
+                  <p className="text-sm font-semibold text-[var(--sea-ink)]">Ho Chi Minh City, Vietnam</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <p className="text-xs font-semibold text-[var(--sea-ink-soft)] uppercase tracking-wider">Location</p>
-            <p className="text-sm font-medium text-[var(--sea-ink)]">Ho Chi Minh City, Vietnam</p>
+
+          {/* Right Side: Decorative/Action */}
+          <div className="bg-[rgba(79,184,178,0.03)] dark:bg-white/5 p-8 md:p-12 flex flex-col justify-center items-center text-center">
+            <div className="relative mb-8">
+              <div className="absolute inset-0 bg-[var(--lagoon-deep)] blur-3xl opacity-20 rounded-full animate-pulse" />
+              <div className="relative p-6 bg-white dark:bg-slate-900 rounded-3xl border border-[var(--line)] shadow-xl rotate-3 hover:rotate-0 transition-transform duration-500">
+                <div className="w-16 h-16 bg-gradient-to-br from-[var(--lagoon-deep)] to-cyan-400 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                  <Mail size={32} />
+                </div>
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold text-[var(--sea-ink)] mb-4">Let's work together</h3>
+            <p className="text-sm text-[var(--sea-ink-soft)] mb-8 max-w-xs">
+              I am currently available for freelance work or full-time positions as a Frontend Developer.
+            </p>
+            <a 
+              href="mailto:luanchuong51@gmail.com"
+              className="px-8 py-3 text-[var(--sea-ink)] dark:bg-white/5 border dark:hover:bg-[var(--lagoon-deep)]/90 text-white rounded-2xl font-bold shadow-lg shadow-black/10 dark:shadow-[var(--lagoon-deep)]/20 hover:scale-105 transition-all duration-300"
+            >
+              Send a Message
+            </a>
           </div>
         </div>
-      </div>
+      </Card>
     </section>
   )
 }
