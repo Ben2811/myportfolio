@@ -25,6 +25,8 @@ export default function Hero() {
             <h1 className="display-title mb-5 max-w-3xl text-4xl leading-[1.02] font-bold tracking-tight text-[var(--sea-ink)] sm:text-6xl">
               Chuong Tu Luan
             </h1>
+            <p className="max-w-2xl text-base text-[var(--sea-ink-soft)] sm:text-lg">MSSV: 2280601846 </p>
+            <p className="max-w-2xl text-base text-[var(--sea-ink-soft)] sm:text-lg">Nhóm: 5</p>
             <p className="mb-8 max-w-2xl text-base text-[var(--sea-ink-soft)] sm:text-lg">
               Motivated frontend developer student at Ho Chi Minh City University of Technology with a strong interest in modern web development. Experienced in building responsive and user-friendly interfaces using React, Next.js and Tailwind CSS.
             </p>
